@@ -3,7 +3,7 @@
 from dotenv import find_dotenv, load_dotenv
 from openai import OpenAI
 
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 
 _ = load_dotenv(find_dotenv())
 

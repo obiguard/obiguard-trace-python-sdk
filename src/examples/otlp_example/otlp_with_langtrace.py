@@ -22,7 +22,7 @@
 # docker run --rm -p 4317:4317 -p 4318:4318 -v $(pwd)/otel-config.yaml:/otel-config.yaml otel/opentelemetry-collector --config otel-config.yaml
 # 2. Run the following code
 
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 from openai import OpenAI
 from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
 

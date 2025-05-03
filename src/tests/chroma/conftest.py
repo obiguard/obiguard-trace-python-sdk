@@ -1,6 +1,6 @@
 import chromadb
 import pytest
-from langtrace_python_sdk.instrumentation.chroma.instrumentation import (
+from obiguard_trace_python_sdk.instrumentation.chroma.instrumentation import (
     ChromaInstrumentation,
 )
 

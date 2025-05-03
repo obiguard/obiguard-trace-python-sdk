@@ -1,7 +1,7 @@
 from google import genai
 from dotenv import load_dotenv
 import os
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 
 load_dotenv()
 langtrace.init(write_spans_to_console=False)

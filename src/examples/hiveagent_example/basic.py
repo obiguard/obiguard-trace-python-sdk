@@ -1,4 +1,4 @@
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 from hive_agent import HiveAgent
 from dotenv import load_dotenv
 from openai import OpenAI

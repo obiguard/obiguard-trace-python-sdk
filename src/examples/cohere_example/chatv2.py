@@ -1,5 +1,5 @@
 import os
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 import cohere
 
 langtrace.init(api_key=os.getenv("LANGTRACE_API_KEY"))

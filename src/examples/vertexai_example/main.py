@@ -3,7 +3,7 @@ import base64
 import asyncio
 import vertexai.preview.generative_models as generative_models
 from vertexai.language_models import ChatModel, InputOutputTextPair, TextGenerationModel
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 from vertexai.generative_models import GenerativeModel, Part, FinishReason
 from dotenv import load_dotenv
 

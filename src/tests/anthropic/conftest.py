@@ -4,7 +4,7 @@ import pytest
 import os
 from anthropic import Anthropic, AsyncAnthropic
 
-from langtrace_python_sdk.instrumentation.anthropic.instrumentation import (
+from obiguard_trace_python_sdk.instrumentation.anthropic.instrumentation import (
     AnthropicInstrumentation,
 )
 

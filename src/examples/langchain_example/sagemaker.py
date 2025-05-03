@@ -9,7 +9,7 @@ from langchain_community.llms.sagemaker_endpoint import (LLMContentHandler,
 from langchain_core.documents import Document
 from langchain_core.prompts import PromptTemplate
 
-from langtrace_python_sdk import langtrace, with_langtrace_root_span
+from obiguard_trace_python_sdk import langtrace, with_langtrace_root_span
 
 # Add the path to the root of the project to the sys.path
 

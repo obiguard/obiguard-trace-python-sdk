@@ -3,17 +3,17 @@
 import os
 import pytest
 
-from langtrace_python_sdk.instrumentation.openai.instrumentation import (
+from obiguard_trace_python_sdk.instrumentation.openai.instrumentation import (
     OpenAIInstrumentation,
 )
-from langtrace_python_sdk.instrumentation.langchain.instrumentation import (
+from obiguard_trace_python_sdk.instrumentation.langchain.instrumentation import (
     LangchainInstrumentation,
 )
-from langtrace_python_sdk.instrumentation.langchain_core.instrumentation import (
+from obiguard_trace_python_sdk.instrumentation.langchain_core.instrumentation import (
     LangchainCoreInstrumentation,
 )
 
-from langtrace_python_sdk.instrumentation.langchain_community.instrumentation import (
+from obiguard_trace_python_sdk.instrumentation.langchain_community.instrumentation import (
     LangchainCommunityInstrumentation,
 )
 

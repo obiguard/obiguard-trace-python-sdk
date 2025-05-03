@@ -1,7 +1,7 @@
 from unittest.mock import MagicMock, patch
 import json
 from langtrace.trace_attributes import SpanAttributes
-from langtrace_python_sdk.constants import LANGTRACE_SDK_NAME
+from obiguard_trace_python_sdk.constants import LANGTRACE_SDK_NAME
 from importlib_metadata import version as v
 
 

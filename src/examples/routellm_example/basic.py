@@ -2,8 +2,8 @@ import sys
 
 sys.path.insert(0, "/Users/karthikkalyanaraman/work/langtrace/langtrace-python-sdk/src")
 
-from langtrace_python_sdk import langtrace
-from langtrace_python_sdk.utils.with_root_span import with_langtrace_root_span
+from obiguard_trace_python_sdk import langtrace
+from obiguard_trace_python_sdk.utils.with_root_span import with_langtrace_root_span
 from routellm.controller import Controller
 from dotenv import load_dotenv
 

@@ -1,7 +1,7 @@
 import os
 from langchain_openai import AzureChatOpenAI
 
-from langtrace_python_sdk.utils.with_root_span import with_langtrace_root_span
+from obiguard_trace_python_sdk.utils.with_root_span import with_langtrace_root_span
 
 model = AzureChatOpenAI(
     azure_endpoint=os.environ['AZURE_OPENAI_ENDPOINT'],

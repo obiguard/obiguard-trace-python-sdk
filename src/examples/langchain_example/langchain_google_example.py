@@ -1,8 +1,8 @@
 from langchain_core.messages import HumanMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langtrace_python_sdk.utils.with_root_span import with_langtrace_root_span
+from obiguard_trace_python_sdk.utils.with_root_span import with_langtrace_root_span
 from dotenv import find_dotenv, load_dotenv
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 
 _ = load_dotenv(find_dotenv())
 

@@ -1,5 +1,5 @@
 import dspy
-from langtrace_python_sdk import langtrace, with_langtrace_root_span
+from obiguard_trace_python_sdk import langtrace, with_langtrace_root_span
 from dotenv import load_dotenv
 
 load_dotenv()

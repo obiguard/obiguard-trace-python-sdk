@@ -3,8 +3,8 @@ import httpx
 from openai import OpenAI
 from opentelemetry.trace import SpanKind, StatusCode
 from langtrace.trace_attributes import SpanAttributes
-from langtrace_python_sdk.constants.instrumentation.openai import APIS
-from langtrace_python_sdk.instrumentation.openai import OpenAIInstrumentation
+from obiguard_trace_python_sdk.constants.instrumentation.openai import APIS
+from obiguard_trace_python_sdk.instrumentation.openai import OpenAIInstrumentation
 from tests.utils import assert_token_count
 from importlib_metadata import version as v
 

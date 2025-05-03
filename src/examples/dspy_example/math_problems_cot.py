@@ -3,7 +3,7 @@ from dspy.datasets.gsm8k import GSM8K, gsm8k_metric
 from dspy.teleprompt import BootstrapFewShot
 
 # flake8: noqa
-from langtrace_python_sdk import langtrace, with_langtrace_root_span
+from obiguard_trace_python_sdk import langtrace, with_langtrace_root_span
 
 langtrace.init()
 

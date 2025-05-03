@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 
 langtrace.init()
 

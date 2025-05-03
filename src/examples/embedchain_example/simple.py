@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
 from embedchain import App
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 
 load_dotenv()
 langtrace.init()

@@ -1,4 +1,4 @@
-from langtrace_python_sdk.constants.instrumentation.common import SERVICE_PROVIDERS
+from obiguard_trace_python_sdk.constants.instrumentation.common import SERVICE_PROVIDERS
 from qdrant_client.models import PointStruct, Distance, VectorParams
 import importlib
 

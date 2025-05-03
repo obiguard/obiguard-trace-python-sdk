@@ -1,6 +1,6 @@
 import pytest
 import json
-from langtrace_python_sdk.constants.instrumentation.openai import APIS
+from obiguard_trace_python_sdk.constants.instrumentation.openai import APIS
 from importlib_metadata import version as v
 from langtrace.trace_attributes import SpanAttributes
 

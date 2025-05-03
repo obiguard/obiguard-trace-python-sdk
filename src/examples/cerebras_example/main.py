@@ -1,4 +1,4 @@
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 from cerebras.cloud.sdk import Cerebras
 from dotenv import load_dotenv
 import re

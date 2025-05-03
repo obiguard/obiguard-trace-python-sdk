@@ -11,7 +11,7 @@ sys.path.insert(
 )
 
 # flake8: noqa
-from langtrace_python_sdk import langtrace, with_langtrace_root_span
+from obiguard_trace_python_sdk import langtrace, with_langtrace_root_span
 
 langtrace.init()
 

@@ -9,7 +9,7 @@ from langchain import hub
 from langchain.agents import create_openai_tools_agent
 import json
 from langgraph.graph import StateGraph, END
-from langtrace_python_sdk import langtrace, with_langtrace_root_span
+from obiguard_trace_python_sdk import langtrace, with_langtrace_root_span
 
 load_dotenv()
 

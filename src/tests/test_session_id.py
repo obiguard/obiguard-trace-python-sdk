@@ -1,10 +1,10 @@
 import os
 import pytest
 from opentelemetry.trace import SpanKind
-from langtrace_python_sdk.langtrace import LangtraceConfig
-from langtrace_python_sdk.extensions.langtrace_exporter import LangTraceExporter
-from langtrace_python_sdk.utils.with_root_span import with_langtrace_root_span
-from langtrace_python_sdk.constants.exporter.langtrace_exporter import LANGTRACE_SESSION_ID_HEADER
+from obiguard_trace_python_sdk.langtrace import LangtraceConfig
+from obiguard_trace_python_sdk.extensions.langtrace_exporter import LangTraceExporter
+from obiguard_trace_python_sdk.utils.with_root_span import with_langtrace_root_span
+from obiguard_trace_python_sdk.constants.exporter.langtrace_exporter import LANGTRACE_SESSION_ID_HEADER
 
 def test_session_id_from_env(exporter):
     # Test session ID from environment variable

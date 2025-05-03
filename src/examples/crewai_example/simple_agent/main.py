@@ -3,7 +3,7 @@ from crewai import Crew
 from dotenv import load_dotenv
 from tasks import PoetryTasks
 
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 
 load_dotenv()
 langtrace.init()

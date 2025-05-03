@@ -6,7 +6,7 @@ from langchain_core.runnables import RunnablePassthrough
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from openai import OpenAI
 
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 from dotenv import load_dotenv
 
 load_dotenv()

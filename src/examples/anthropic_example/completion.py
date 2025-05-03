@@ -3,7 +3,7 @@
 import anthropic
 from dotenv import find_dotenv, load_dotenv
 
-from langtrace_python_sdk import langtrace, with_langtrace_root_span
+from obiguard_trace_python_sdk import langtrace, with_langtrace_root_span
 
 _ = load_dotenv(find_dotenv())
 

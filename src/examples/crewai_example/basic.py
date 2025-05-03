@@ -2,8 +2,8 @@ import os
 
 os.environ["OPENAI_MODEL_NAME"] = "gpt-3.5-turbo"
 os.environ["SERPER_API_KEY"] = ""  # serper.dev API key
-from langtrace_python_sdk import langtrace
-from langtrace_python_sdk.utils.with_root_span import with_langtrace_root_span
+from obiguard_trace_python_sdk import langtrace
+from obiguard_trace_python_sdk.utils.with_root_span import with_langtrace_root_span
 from crewai import Crew, Process
 from crewai import Task
 from crewai import Agent

@@ -1,4 +1,4 @@
-from langtrace_python_sdk import langtrace, with_langtrace_root_span
+from obiguard_trace_python_sdk import langtrace, with_langtrace_root_span
 import ollama
 from ollama import AsyncClient
 from dotenv import load_dotenv

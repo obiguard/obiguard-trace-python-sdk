@@ -1,6 +1,6 @@
 import pytest
 import json
-from langtrace_python_sdk.constants.instrumentation.openai import APIS
+from obiguard_trace_python_sdk.constants.instrumentation.openai import APIS
 from tests.utils import (
     assert_completion_in_events,
     assert_prompt_in_events,

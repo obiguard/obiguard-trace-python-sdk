@@ -9,7 +9,7 @@ from .query_text import (
     query_data_near_text,
     query_data_near_vector,
 )
-from langtrace_python_sdk import with_langtrace_root_span
+from obiguard_trace_python_sdk import with_langtrace_root_span
 
 
 class WeaviateRunner:

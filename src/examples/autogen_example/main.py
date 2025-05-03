@@ -1,4 +1,4 @@
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 from autogen import ConversableAgent
 from dotenv import load_dotenv
 from autogen.coding import LocalCommandLineCodeExecutor

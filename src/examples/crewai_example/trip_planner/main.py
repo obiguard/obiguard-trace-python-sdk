@@ -1,7 +1,7 @@
 from crewai import Crew
 from .agents import TravelAgents
 from .tasks import TravelTasks
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 from dotenv import load_dotenv
 
 load_dotenv()

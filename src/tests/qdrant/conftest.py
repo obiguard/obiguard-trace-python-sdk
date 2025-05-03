@@ -3,7 +3,7 @@
 import pytest
 
 
-from langtrace_python_sdk.instrumentation.qdrant.instrumentation import (
+from obiguard_trace_python_sdk.instrumentation.qdrant.instrumentation import (
     QdrantInstrumentation,
 )
 from qdrant_client import QdrantClient

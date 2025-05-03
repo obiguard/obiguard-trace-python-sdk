@@ -6,13 +6,13 @@ from dotenv import find_dotenv, load_dotenv
 from openai import OpenAI
 from pinecone import Pinecone, ServerlessSpec
 
-from langtrace_python_sdk import (
+from obiguard_trace_python_sdk import (
     get_prompt_from_registry,
     langtrace,
     with_langtrace_root_span,
     with_additional_attributes,
 )
-from langtrace_python_sdk.utils.with_root_span import SendUserFeedback
+from obiguard_trace_python_sdk.utils.with_root_span import SendUserFeedback
 from opentelemetry.sdk.trace.export import ConsoleSpanExporter
 
 _ = load_dotenv(find_dotenv())

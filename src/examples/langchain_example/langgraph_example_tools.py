@@ -12,7 +12,7 @@ from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode, tools_condition
 from langchain_core.messages import AIMessage, ToolMessage
 
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 
 langtrace.init()
 

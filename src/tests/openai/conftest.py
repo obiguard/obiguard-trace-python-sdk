@@ -3,7 +3,7 @@
 import pytest
 import os
 from openai import OpenAI, AsyncOpenAI
-from langtrace_python_sdk.instrumentation.openai.instrumentation import (
+from obiguard_trace_python_sdk.instrumentation.openai.instrumentation import (
     OpenAIInstrumentation,
 )
 

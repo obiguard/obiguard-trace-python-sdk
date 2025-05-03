@@ -1,5 +1,5 @@
 from examples.azureopenai_example.completion import chat_completion
-from langtrace_python_sdk import with_langtrace_root_span, langtrace
+from obiguard_trace_python_sdk import with_langtrace_root_span, langtrace
 
 langtrace.init()
 

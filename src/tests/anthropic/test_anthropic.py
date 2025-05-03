@@ -1,8 +1,8 @@
 import pytest
 import json
 import importlib
-from langtrace_python_sdk.constants.instrumentation.anthropic import APIS
-from langtrace_python_sdk.constants import LANGTRACE_SDK_NAME
+from obiguard_trace_python_sdk.constants.instrumentation.anthropic import APIS
+from obiguard_trace_python_sdk.constants import LANGTRACE_SDK_NAME
 from tests.utils import (
     assert_completion_in_events,
     assert_langtrace_attributes,

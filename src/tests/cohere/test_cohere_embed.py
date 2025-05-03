@@ -1,9 +1,9 @@
-from langtrace_python_sdk.constants.instrumentation.cohere import APIS
-from langtrace_python_sdk.constants.instrumentation.common import SERVICE_PROVIDERS
+from obiguard_trace_python_sdk.constants.instrumentation.cohere import APIS
+from obiguard_trace_python_sdk.constants.instrumentation.common import SERVICE_PROVIDERS
 import pytest
 from importlib_metadata import version as v
 
-from langtrace_python_sdk.constants import LANGTRACE_SDK_NAME
+from obiguard_trace_python_sdk.constants import LANGTRACE_SDK_NAME
 from langtrace.trace_attributes import SpanAttributes
 
 

@@ -1,6 +1,6 @@
 import os
-from langtrace_python_sdk import langtrace
-from langtrace_python_sdk.utils.with_root_span import with_langtrace_root_span
+from obiguard_trace_python_sdk import langtrace
+from obiguard_trace_python_sdk.utils.with_root_span import with_langtrace_root_span
 from neo4j import GraphDatabase
 from neo4j_graphrag.generation import GraphRAG
 from neo4j_graphrag.indexes import create_vector_index

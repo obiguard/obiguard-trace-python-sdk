@@ -1,4 +1,4 @@
-from langtrace_python_sdk import (
+from obiguard_trace_python_sdk import (
     get_prompt_from_registry,
     with_langtrace_root_span,
     with_additional_attributes,

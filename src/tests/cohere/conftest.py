@@ -4,7 +4,7 @@ import pytest
 import os
 import cohere
 
-from langtrace_python_sdk.instrumentation.cohere.instrumentation import (
+from obiguard_trace_python_sdk.instrumentation.cohere.instrumentation import (
     CohereInstrumentation,
 )
 

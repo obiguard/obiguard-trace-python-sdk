@@ -45,7 +45,7 @@ pip install langtrace-python-sdk
 ```
 
 ```python
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 langtrace.init(api_key='<your_api_key>') # Get your API key at langtrace.ai
 ```
 
@@ -113,7 +113,7 @@ Langtrace automatically captures traces from the following vendors:
 #### FastAPI
 ```python
 from fastapi import FastAPI
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 from openai import OpenAI
 
 langtrace.init()
@@ -133,7 +133,7 @@ def root():
 #### Django
 ```python
 # settings.py
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 langtrace.init()
 
 # views.py
@@ -153,7 +153,7 @@ def chat_view(request):
 #### Flask
 ```python
 from flask import Flask
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 from openai import OpenAI
 
 app = Flask(__name__)
@@ -171,7 +171,7 @@ def chat():
 
 #### LangChain
 ```python
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
 
@@ -189,7 +189,7 @@ response = chain.invoke({"input": "Hello!"})
 
 #### LlamaIndex
 ```python
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 from llama_index import VectorStoreIndex, SimpleDirectoryReader
 
 langtrace.init()
@@ -205,7 +205,7 @@ response = query_engine.query("What's in the documents?")
 
 #### DSPy
 ```python
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 import dspy
 from dspy.teleprompt import BootstrapFewShot
 
@@ -226,7 +226,7 @@ program = compiler.compile(SimpleQA)
 
 #### CrewAI
 ```python
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 from crewai import Agent, Task, Crew
 
 langtrace.init()
@@ -311,7 +311,7 @@ Configure Langtrace behavior using these environment variables:
 Use the root span decorator to create custom trace hierarchies:
 
 ```python
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 
 @langtrace.with_langtrace_root_span(name="custom_operation")
 def my_function():
@@ -340,7 +340,7 @@ with langtrace.inject_additional_attributes({"custom_key": "custom_value"}):
 Register and manage prompts for better traceability:
 
 ```python
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 
 # Register a prompt template
 langtrace.register_prompt("greeting", "Hello, {name}!")
@@ -357,7 +357,7 @@ response = client.chat.completions.create(
 Collect and analyze user feedback:
 
 ```python
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 
 # Record user feedback for a trace
 langtrace.record_feedback(
@@ -373,7 +373,7 @@ langtrace.record_feedback(
 Manage DSPy checkpoints for workflow tracking:
 
 ```python
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 
 # Enable checkpoint tracing (disabled by default in production)
 langtrace.init(
@@ -387,7 +387,7 @@ langtrace.init(
 Track vector database operations:
 
 ```python
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 
 # Vector operations are automatically traced
 with langtrace.inject_additional_attributes({"operation_type": "similarity_search"}):
@@ -408,7 +408,7 @@ For more detailed examples and use cases, visit our [documentation](https://docs
 Get started with self-hosted Langtrace:
 
 ```python
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 langtrace.init(write_spans_to_console=True)  # For console logging
 # OR
 langtrace.init(custom_remote_exporter=<your_exporter>, batch=<True or False>)  # For custom exporter

@@ -1,6 +1,6 @@
 import boto3
 import json
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 from dotenv import load_dotenv
 import botocore
 from langchain_aws import ChatBedrock

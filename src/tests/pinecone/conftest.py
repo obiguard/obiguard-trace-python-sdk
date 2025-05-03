@@ -1,9 +1,9 @@
 import pytest
 import os
-from langtrace_python_sdk.instrumentation.pinecone.instrumentation import (
+from obiguard_trace_python_sdk.instrumentation.pinecone.instrumentation import (
     PineconeInstrumentation,
 )
-from langtrace_python_sdk.instrumentation.openai.instrumentation import (
+from obiguard_trace_python_sdk.instrumentation.openai.instrumentation import (
     OpenAIInstrumentation,
 )
 from openai import OpenAI

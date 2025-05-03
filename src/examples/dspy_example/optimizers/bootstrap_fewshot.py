@@ -3,7 +3,7 @@ from dotenv import find_dotenv, load_dotenv
 from dspy.datasets import HotPotQA
 from dspy.teleprompt import BootstrapFewShot
 
-from langtrace_python_sdk import inject_additional_attributes, langtrace
+from obiguard_trace_python_sdk import inject_additional_attributes, langtrace
 
 _ = load_dotenv(find_dotenv())
 

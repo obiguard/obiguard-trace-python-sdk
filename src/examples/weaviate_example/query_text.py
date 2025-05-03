@@ -21,8 +21,8 @@ from weaviate.classes.aggregate import GroupByAggregate
 from weaviate.classes.query import Filter, HybridFusion, MetadataQuery
 from weaviate.collections.classes.grpc import Move
 
-import langtrace_python_sdk.langtrace as langtrace
-from langtrace_python_sdk import with_langtrace_root_span
+import obiguard_trace_python_sdk.langtrace as langtrace
+from obiguard_trace_python_sdk import with_langtrace_root_span
 
 load_dotenv()
 # Set these environment variables

@@ -1,5 +1,5 @@
-from langtrace_python_sdk.constants import LANGTRACE_SDK_NAME
-from langtrace_python_sdk.constants.instrumentation.groq import APIS
+from obiguard_trace_python_sdk.constants import LANGTRACE_SDK_NAME
+from obiguard_trace_python_sdk.constants.instrumentation.groq import APIS
 import pytest
 from langtrace.trace_attributes import SpanAttributes
 from importlib_metadata import version as v

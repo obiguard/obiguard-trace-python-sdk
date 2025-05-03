@@ -4,7 +4,7 @@ from inspect_ai import Task, task
 from inspect_ai.dataset import csv_dataset, Sample
 from inspect_ai.scorer import model_graded_qa
 from inspect_ai.solver import chain_of_thought, self_critique
-from langtrace_python_sdk.extensions.langtrace_filesystem import LangTraceFileSystem
+from obiguard_trace_python_sdk.extensions.langtrace_filesystem import LangTraceFileSystem
 
 _ = load_dotenv(find_dotenv())
 

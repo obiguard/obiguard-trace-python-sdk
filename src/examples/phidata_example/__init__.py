@@ -1,6 +1,6 @@
 import asyncio
 from examples.phidata_example.agent import agent_run
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 
 langtrace.init()
 

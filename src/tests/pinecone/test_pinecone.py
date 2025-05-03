@@ -1,7 +1,7 @@
 import pytest
 import json
-from langtrace_python_sdk.constants.instrumentation.common import SERVICE_PROVIDERS
-from langtrace_python_sdk.constants.instrumentation.pinecone import APIS
+from obiguard_trace_python_sdk.constants.instrumentation.common import SERVICE_PROVIDERS
+from obiguard_trace_python_sdk.constants.instrumentation.pinecone import APIS
 from importlib_metadata import version as v
 
 

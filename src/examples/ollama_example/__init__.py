@@ -1,5 +1,5 @@
 from .basic import chat, async_chat, async_generate, generate, embed, async_embed
-from langtrace_python_sdk import with_langtrace_root_span
+from obiguard_trace_python_sdk import with_langtrace_root_span
 import asyncio
 
 

@@ -1,4 +1,4 @@
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 from phi.agent import Agent
 from phi.model.openai import OpenAIChat
 from phi.tools.duckduckgo import DuckDuckGo

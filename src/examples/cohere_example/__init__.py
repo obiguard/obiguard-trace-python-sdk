@@ -6,7 +6,7 @@ from examples.cohere_example.tools import tool_calling
 from examples.cohere_example.embed import embed
 from examples.cohere_example.rerank import rerank
 from examples.cohere_example.rerankv2 import rerank_v2
-from langtrace_python_sdk import with_langtrace_root_span
+from obiguard_trace_python_sdk import with_langtrace_root_span
 
 
 class CohereRunner:

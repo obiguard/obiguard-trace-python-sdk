@@ -1,6 +1,6 @@
 import importlib
 from chromadb.utils import embedding_functions
-from langtrace_python_sdk.constants.instrumentation.common import SERVICE_PROVIDERS
+from obiguard_trace_python_sdk.constants.instrumentation.common import SERVICE_PROVIDERS
 
 COLLECTION_NAME = "test_collection"
 

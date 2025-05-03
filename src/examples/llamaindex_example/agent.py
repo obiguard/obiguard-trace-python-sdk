@@ -6,7 +6,7 @@ from llama_index.llms.openai import OpenAI
 from llama_index.core.llms import ChatMessage
 from llama_index.core.tools import BaseTool, FunctionTool
 from openai.types.chat import ChatCompletionMessageToolCall
-from langtrace_python_sdk import langtrace
+from obiguard_trace_python_sdk import langtrace
 
 import nest_asyncio
 

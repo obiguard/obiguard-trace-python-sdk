@@ -2,7 +2,7 @@ import os
 import pytest
 
 from groq import Groq, AsyncGroq
-from langtrace_python_sdk.instrumentation import GroqInstrumentation
+from obiguard_trace_python_sdk.instrumentation import GroqInstrumentation
 from dotenv import load_dotenv
 
 load_dotenv()

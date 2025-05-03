@@ -4,7 +4,7 @@ from examples.awsbedrock_examples.converse import (
     use_invoke_model_titan,
     use_invoke_model_llama,
 )
-from langtrace_python_sdk import langtrace, with_langtrace_root_span
+from obiguard_trace_python_sdk import langtrace, with_langtrace_root_span
 
 
 class AWSBedrockRunner:

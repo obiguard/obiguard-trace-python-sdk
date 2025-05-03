@@ -1,6 +1,6 @@
 from dotenv import find_dotenv, load_dotenv
 from openai import OpenAI
-from langtrace_python_sdk import langtrace, with_langtrace_root_span, SendUserFeedback
+from obiguard_trace_python_sdk import langtrace, with_langtrace_root_span, SendUserFeedback
 
 _ = load_dotenv(find_dotenv())
 
