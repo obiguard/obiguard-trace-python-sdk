@@ -70,8 +70,6 @@ def patch_crew(operation_name, version, tracer: Tracer):
     def traced_method(wrapped, instance, args, kwargs):
         service_provider = SERVICE_PROVIDERS["CREWAI"]
         extra_attributes = baggage.get_baggage(LANGTRACE_ADDITIONAL_SPAN_ATTRIBUTES_KEY)
-        print('patch_crew >>>>:')
-        print('extra_attributes:', extra_attributes)
         span_attributes = {
             "langtrace.sdk.name": "obiguard-trace-python-sdk",
             "langtrace.service.name": service_provider,

@@ -22,7 +22,7 @@ from typing import Any, Dict, Optional
 
 import sentry_sdk
 from colorama import Fore
-from opentelemetry import trace
+from opentelemetry import trace, baggage, context
 from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import (
     OTLPSpanExporter as GRPCExporter,
 )
@@ -40,13 +40,14 @@ from opentelemetry.sdk.trace.export import (
 from opentelemetry.util.re import parse_env_headers
 from sentry_sdk.types import Event, Hint
 
-from langtrace_python_sdk.constants import LANGTRACE_SDK_NAME, SENTRY_DSN
-from langtrace_python_sdk.constants.exporter.langtrace_exporter import (
+from .constants import LANGTRACE_SDK_NAME, SENTRY_DSN
+from .constants.exporter.langtrace_exporter import (
     LANGTRACE_REMOTE_URL,
     LANGTRACE_SESSION_ID_HEADER,
 )
-from langtrace_python_sdk.extensions.langtrace_exporter import LangTraceExporter
-from langtrace_python_sdk.instrumentation import (
+from .constants.instrumentation.common import LANGTRACE_ADDITIONAL_SPAN_ATTRIBUTES_KEY
+from .extensions.langtrace_exporter import LangTraceExporter
+from .instrumentation import (
     AgnoInstrumentation,
     AnthropicInstrumentation,
     AutogenInstrumentation,
@@ -83,14 +84,15 @@ from langtrace_python_sdk.instrumentation import (
     VertexAIInstrumentation,
     WeaviateInstrumentation,
 )
-from langtrace_python_sdk.types import DisableInstrumentations, InstrumentationMethods
-from langtrace_python_sdk.utils import (
+from .types import DisableInstrumentations, InstrumentationMethods
+from .utils import (
     check_if_sdk_is_outdated,
     get_sdk_version,
     is_package_installed,
     validate_instrumentations,
 )
-from langtrace_python_sdk.utils.langtrace_sampler import LangtraceSampler
+from .utils.langtrace_sampler import LangtraceSampler
+
 
 
 class LangtraceConfig:
@@ -149,7 +151,7 @@ def setup_tracer_provider(config: LangtraceConfig, host: str) -> TracerProvider:
 
 def get_headers(config: LangtraceConfig):
     headers = {
-        "x-api-key": config.api_key,
+        # "x-api-key": config.api_key,
     }
 
     if config.session_id:
@@ -268,6 +270,7 @@ def init(
     disable_logging: bool = False,
     headers: Dict[str, str] = {},
     session_id: Optional[str] = None,
+    baggage_attributes: Optional[Dict[str, str]] = None,
 ):
 
     check_if_sdk_is_outdated()
@@ -297,19 +300,19 @@ def init(
         + Fore.RESET
     )
 
-    if host == LANGTRACE_REMOTE_URL and not config.api_key:
-        print(Fore.RED)
-        print(
-            "Missing Langtrace API key, proceed to https://langtrace.ai to create one"
-        )
-        print("Set the API key as an environment variable LANGTRACE_API_KEY")
-        print(Fore.RESET)
-        return
+    # if host == LANGTRACE_REMOTE_URL and not config.api_key:
+    #     print(Fore.RED)
+    #     print(
+    #         "Missing Langtrace API key, proceed to https://langtrace.ai to create one"
+    #     )
+    #     print("Set the API key as an environment variable LANGTRACE_API_KEY")
+    #     print(Fore.RESET)
+    #     return
 
     provider = setup_tracer_provider(config, host)
     exporter = get_exporter(config, host)
 
-    os.environ["LANGTRACE_API_HOST"] = host.replace("/api/trace", "")
+    # os.environ["LANGTRACE_API_HOST"] = host.replace("/api/trace", "")
     trace.set_tracer_provider(provider)
     all_instrumentations = {
         "openai": OpenAIInstrumentation(),
@@ -351,12 +354,16 @@ def init(
         "openai-agents": OpenAIAgentsInstrumentation(),
     }
 
+    if baggage_attributes:
+        new_ctx = baggage.set_baggage(LANGTRACE_ADDITIONAL_SPAN_ATTRIBUTES_KEY, baggage_attributes)
+        context.attach(new_ctx)
+
     init_instrumentations(config.disable_instrumentations, all_instrumentations)
     add_span_processor(provider, config, exporter)
 
     if config.disable_logging:
         sys.stdout = sys.__stdout__
-    init_sentry(config, host)
+    # init_sentry(config, host)
 
 
 def before_send(event: Event, hint: Hint):

@@ -1,5 +1,6 @@
 from datetime import datetime
 import json
+from opentelemetry.trace import format_trace_id, format_span_id
 
 
 def extract_input_params(args, kwargs):
@@ -68,3 +69,6 @@ class datetime_encoder(json.JSONEncoder):
             return o.isoformat()
 
         return json.JSONEncoder.default(self, o)
+
+def traceparent_from_span(span):
+    return f"00-{format_trace_id(span.get_span_context().trace_id)}-{format_span_id(span.get_span_context().span_id)}-{span.get_span_context().trace_flags:02x}"
