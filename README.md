@@ -39,7 +39,7 @@ pip install obiguard-trace-python-sdk
 
 ```python
 from obiguard_trace_python_sdk import langtrace
-langtrace.init(api_key='<your_api_key>') # Get your API key at langtrace.ai
+langtrace.init(api_key='<your Obiguard API or virtual key>') # Get your API key at obiguard.ai
 ```
 
 ## 🔗 Supported Integrations
