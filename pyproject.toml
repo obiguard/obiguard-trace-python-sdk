@@ -8,9 +8,9 @@ build-backend = "hatchling.build"
 [project]
 name = "obiguard-trace-python-sdk"
 dynamic = ["version"]
-description = "Python SDK for LangTrace"
+description = "Python SDK for Obiguard Trace"
 readme = "README.md"
-authors = [{ name = "Scale3 Labs", email = "engineering@scale3labs.com" }]
+authors = [{ name = "Obiguard", email = "support@obiguard.com" }]
 license = "Apache-2.0"
 classifiers = [
   "Programming Language :: Python :: 3",
@@ -69,7 +69,7 @@ test = ["pytest", "pytest-vcr", "pytest-asyncio"]
 
 
 [project.urls]
-Homepage = "https://github.com/Scale3-Labs/langtrace-python-sdk"
+Homepage = "https://github.com/obiguard-AI/obiguard-python-sdk"
 
 
 [tool.hatch.version]
@@ -81,8 +81,8 @@ include = ["/src"]
 [tool.hatch.build.targets.wheel]
 packages = ["src/obiguard_trace_python_sdk", "src/examples", "src/tests"]
 
-[tool.hatch.source]
-url = "https://langtrace.gateway.scarf.sh/simple/"
+#[tool.hatch.source]
+#url = "https://langtrace.gateway.scarf.sh/simple/"
 
 [project.entry-points."fsspec.specs"]
 langtracefs = "obiguard_trace_python_sdk:LangTraceFileSystem"

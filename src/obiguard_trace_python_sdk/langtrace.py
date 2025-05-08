@@ -46,7 +46,6 @@ from .constants.exporter.langtrace_exporter import (
     LANGTRACE_SESSION_ID_HEADER,
 )
 from .constants.instrumentation.common import LANGTRACE_ADDITIONAL_SPAN_ATTRIBUTES_KEY
-from .extensions.langtrace_exporter import LangTraceExporter
 from .instrumentation import (
     AgnoInstrumentation,
     AnthropicInstrumentation,
